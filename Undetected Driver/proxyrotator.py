@@ -7,9 +7,9 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def getProxy():
-    resp = get('https://free-proxy-list.net/#Get')
-    proxi = re.findall(r'<tr><td>(\w+\.\w+\.\w+\.\w+)[^>].td><td>(\d+)<', resp.text)
-    prox = [f"http://{proxies}:{''.join(port)}" for proxies, port in proxi]
+    resp = get('https://free-proxy-list.net/')
+    proxi = re.findall(r'<tr><td>(\d+\.\d+\.\d+\.\d+)</td><td>(\d+)<', resp.text)
+    prox = [f"http://{proxies}:{port}" for proxies, port in proxi]
     shuffle(prox)
     return prox
 
