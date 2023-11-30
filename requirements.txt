@@ -1,8 +1,6 @@
-colored==1.4.3
+colored==1.4.4
 pydub==0.25.1
 requests==2.28.1
-selenium==4.6.0
-SpeechRecognition==3.8.1
-undetected_chromedriver==3.1.6
-urllib3==1.26.12
+SpeechRecognition==3.9.0
+undetected_chromedriver==3.5.4
 user_agent==0.1.10
